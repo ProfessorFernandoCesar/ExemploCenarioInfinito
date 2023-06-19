@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Fundo
+    uniqueID: 3992477395
+    locked: 0
+  - name: PlanoJato
+    uniqueID: 4029780255
+    locked: 0

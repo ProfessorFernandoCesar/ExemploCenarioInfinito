@@ -8,9 +8,9 @@ public class Player : MonoBehaviour
     public float entradaHorizontal ;
     public float entradaVertical ;
 
-   // public GameObject pfLaser ;
+    public GameObject pfBala ;
     
-    public float tempoDeDisparo = 0.3f ;
+    public float tempoDeDisparo = 0.1f ;
     public float podeDisparar = 0.0f ;
 
     public bool possoDarDisparoTriplo = false ;
@@ -34,17 +34,17 @@ public class Player : MonoBehaviour
  
          
 
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)){
+        if (Input.GetKey(KeyCode.Space) || Input.GetMouseButtonDown(0)){
 
             if ( Time.time > podeDisparar ){
                
                if (possoDarDisparoTriplo == true ){
 
-          //         Instantiate(disparoTriplo,transform.position + new Vector3(0,1.1f,0),Quaternion.identity);
+          //        Instantiate(disparoTriplo,transform.position + new Vector3(0,1.1f,0),Quaternion.identity);
 
                } else {   
 
-               //    Instantiate(pfLaser,transform.position + new Vector3(0,1.1f,0),Quaternion.identity);
+                    Instantiate(pfBala,transform.position + new Vector3(0.5f,-0.3f,0),Quaternion.identity);
                }
                
                podeDisparar = Time.time + tempoDeDisparo ;
